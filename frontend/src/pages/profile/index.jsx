@@ -100,7 +100,7 @@ export default function ProfilePage() {
 
                 <div style={{flex: "0.8"}}>
 
-                    <div style={{display: "flex", width: "fit-content", alignItems: "center", gap: "1.2rem"}}>
+                    <div style={{display: "flex", flexDirection: "column", width: "fit-content", alignItems: "center", gap: "0.5rem"}}>
                         <input className={styles.nameEdit} type='text' value={userProfile.userId.name} onChange={(e) => {
                             setUserProfile({...userProfile, userId: {...userProfile.userId, name: e.target.value}})
                         }} />
@@ -109,7 +109,13 @@ export default function ProfilePage() {
                     
 
               <div>
-                <textarea style={{width: "100%"}}
+                <textarea
+                onInput={(e) => {
+                    e.target.style.height = "auto"
+                    e.target.style.height = e.target.scrollHeight + "px"
+                }}
+                
+                 style={{width: "100%", resize:"none"}}
                 value={userProfile.bio}
                 onChange={(e) => {
                     setUserProfile({...userProfile, bio: e.target.value});

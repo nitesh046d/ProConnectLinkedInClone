@@ -30,6 +30,7 @@
 
 .profileContainer_details {
     padding-top: 5.6rem;
+    
 }
 .card {
     display: flex;
@@ -123,6 +124,8 @@
 .nameEdit {
     font-size: 1.5rem;
     font-weight: bold;
+    
+    
 }
 
 .updateProfileBtn{
@@ -192,9 +195,20 @@
 .profileContainer_flex {
     display: flex;
     gap: 0.7rem;
+    overflow-x: hidden;
 }
-@media only screen and (max-width: 600px) {
+
+
+ @media only screen and (max-width: 600px) {
 .profileContainer_flex {
     flex-direction: column;
-}
-}
+    
+  
+  
+    
+
+} 
+
+
+ }
+ 
