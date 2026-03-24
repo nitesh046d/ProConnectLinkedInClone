@@ -1,0 +1,67 @@
+POST http://localhost:9080/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "nitesh25d",
+    "password": "250000",
+    "email": "nitesh25@gmail.com",
+     "name":"Nitesh"
+
+}
+
+###
+
+POST http://localhost:9080/login HTTP/1.1
+Content-Type: application/json
+
+{
+    
+   
+    "email": "nitesh25@gmail.com",
+     "password": "250000"
+    
+
+}
+
+### 
+
+GET  http://localhost:9080/get_user_and_profile HTTP/1.1
+Content-Type: application/json
+
+{
+  "token": "1501ab5001aa19449dd9cd5cea45828e917f37023180db6b751699e5b145ef48"
+   
+}
+###
+
+POST   http://localhost:9080/update_profile_data HTTP/1.1
+Content-Type: application/json
+
+{
+    "token": "9b39328baadc7426ccf344555f152e1c1a186c28d9524863e4c9bbcb6fe08ef4",
+    "bio": "Hey I am Tamanna, I am from delhi",
+    "Past Work": [{
+        "Company Name": "Microsoft",
+        "Position": "Developer",
+        "Years": "2+"
+
+    }]
+    
+}
+###
+POST   http://localhost:9080/post HTTP/1.1
+Content-Type: application/json
+
+{
+     "token": "dfb6dcc47bfce8cc4d9823c772bf6d058fdfa5e3be2ad9b5bfdc73ec58a6a3c2",
+     "body": "Here I am"
+    
+}
+
+###
+GET    http://localhost:9080/get_user_and_profile HTTP/1.1
+Content-Type: application/json
+
+{
+ 
+}
