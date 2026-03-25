@@ -372,6 +372,8 @@ export const getUserProfileAndUserBasedOnUsername = async (req, res) => {
 
         const userProfile = await Profile.findOne({userId: user._id})
         .populate("userId", "name username email profilePicture");
+        
+
         return res.json({"profile": userProfile})
     } catch (err) {
           return res.status(500).json({message: err.message})
