@@ -64,7 +64,7 @@ export default function LoginComponent() {
         <div className={styles.cardContainer}>
               <div className={styles.cardContainer_left}>
                 <p className={styles.cardleft_heading}> {userLoginMethod ? "Sign In" : "Sign Up"}</p>
-                  <p style={{color: authState?.isError? "red": "green"}}>{authState?.message} </p>
+                  <p style={{color: authState.isError? "red": "green"}}>{authState.message.message} </p>
                 <div className={styles.inputContainers}>
 
                     {!userLoginMethod && <div className={styles.inputRow}><input onChange={(e) => setUsername(e.target.value)} className={styles.inputField} type='text' placeholder='Username' />
